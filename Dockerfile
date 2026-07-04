@@ -1,5 +1,7 @@
 FROM postgres:17
 
+ARG CACHEBUST=1
+
 RUN apt-get update \
     && apt-get install -y postgresql-17-cron \
     && rm -rf /var/lib/apt/lists/*
